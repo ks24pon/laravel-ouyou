@@ -23,7 +23,7 @@ class MoviesController extends Controller
     }
     public function store(Request $request)
     {
-        dd($request);
+        
 
         $this->validate($request,[
             'url' => 'required|max:11',
@@ -34,7 +34,7 @@ class MoviesController extends Controller
             'url' => $request->url,
             'comment' => $request->comment,
         ]);
-
+        dd($request);
         return back();
     }
     public function destroy($id)
